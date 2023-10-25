@@ -15,6 +15,9 @@ public class CS20SDollarCalculator
     public static void main(String[] args){
     // *** constants ***
     
+        final double QVALUE = 0.25;     // dollar value of a quarter
+        final double DVALUE = 0.1;      // dollar value of a dime
+    
     // *** variables ***
     
         String banner = "";     // output banner
@@ -58,7 +61,18 @@ public class CS20SDollarCalculator
     
     // *** processing ***
     
+        // get dollars from quarters
+        dollars = quarters * QVALUE;
+        //System.out.println(dollars);
+        
+        // add dollars from dimes
+        dollars += dimes * DVALUE;
+        //System.out.println(dollars);
+        
     // *** output ***
+    
+        System.out.print(quarters + " Quarters " + " + " + dimes + " Dimes ");
+        System.out.println(" = $" + dollars);
     
     // *** closing message ***
     
