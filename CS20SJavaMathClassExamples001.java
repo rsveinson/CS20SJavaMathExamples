@@ -41,7 +41,7 @@ public class CS20SJavaMathClassExamples001
         banner = "*************************\n";
         banner += "Name: R Sveinson\n";
         banner += "Class: CS20S\n";
-        banner += "Assignment: AxQy\n";
+        banner += "Assignment: Java Class Library Examples\n";
         banner += "*************************\n";
         
         System.out.println(banner);
@@ -49,16 +49,37 @@ public class CS20SJavaMathClassExamples001
     // *** Math examples ***
     
         // the .pow() method
-        // System.out.println(nl + "************ .pow *****************");
-        // double power = 0.0;     // the result of an exponent
-        // int base = 0;           // the base of the exponent
-        // int exponent = 0;       // the exponent
+        System.out.println(nl + "************ .pow *****************");
+        double power = 0.0;     // the result of an exponent
+        int base = 0;           // the base of the exponent
+        int exponent = 0;       // the exponent
         
-        // base = 2;
-        // exponent = 3;
+        base = 2;
+        exponent = 3;
+        /* the pow function is used to
+         * raise one number to some power
+         * the first argument is the base, the 
+         * second is the exponent
+         * the result is a double
+         */
         
-        // power = Math.pow(base, exponent);
-        // System.out.format("%4d^%1d = %6.2f %s", base, exponent, power, nl);    
+        power = Math.pow(base, exponent);
+        // //System.out.println(Math.pow(4, exponent));
+        
+        // /* using format codes
+         // * % means that the follwing is a format code
+         // * the number specifies the width of the field in character
+         // * d code means it will print an int
+         // * f code means it will print a double
+         // * %6.2f means that there will be 2 decimal places
+         // * s code means string and nl prints the new line character
+         // */
+        
+        System.out.format("%4d^%1d = %6.2f %s", base, exponent, power, nl); 
+        System.out.format("print the %% sign");
+        
+        // here's another way to apply .format
+        //System.out.println(base + "^" + exponent + " = " + String.format("%6.2F",power) + nl);
         
         // System.out.println(nl + nl + "************ .max and .min *****************");
         
@@ -68,21 +89,26 @@ public class CS20SJavaMathClassExamples001
         // int big = 0;
         // int small = 0;
         
+        // /* Math.max() will compare the two arguments
+         // * and return the larger of the two
+         // * Math.min() compares the two arguments
+         // * and returns the smaller of the two
+         // */
         // big = Math.max(n1, n2);
         // small = Math.min(n1, n2);
         
         // System.out.println("Biggest: "  + big);
         // System.out.println("Smallest: "  + small);
         
-        // System.out.println(nl + nl + "************ .sqrt *****************");
-        // double squareRoot = 0.0;
-        // int number = 25;
+        System.out.println(nl + nl + "************ .sqrt *****************");
+        double squareRoot = 0.0;
+        int number = 25;
         
-        // squareRoot = Math.sqrt(number);
-        // System.out.format("Square root of %3d = %3.3f%s",number, squareRoot, nl);
+        squareRoot = Math.sqrt(number);
+        System.out.format("Square root of %3d = %6.3f%s",number, squareRoot, nl);
         
-        // squareRoot = Math.sqrt(number + 3);
-        // System.out.format("Square root of %3d = %3.3f%s",number, squareRoot, nl);
+        squareRoot = Math.sqrt(number + 3);
+        System.out.format("Square root of %3d = %6.3f%s",(number + 3), squareRoot, nl);
         
     
     // *** output ***
